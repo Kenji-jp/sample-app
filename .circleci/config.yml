@@ -52,7 +52,7 @@ jobs:
             circleci tests split --split-by=timings)"
 
           bundle exec rspec \
-            --format documentation
+            --format documentation \
             $TEST_FILES
 
     # collect reports
