@@ -68,6 +68,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 # view装飾
+gem 'autoprefixer-rails'
 gem 'bootstrap'
 gem 'jquery-rails'
 
@@ -80,7 +81,7 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 # ページャ
 gem 'kaminari','~> 1.1.1'
-gem 'nokogiri', '1.10.9'
+gem 'nokogiri', '1.10.10'
 
 # デバッグ
 gem 'pry-rails'
