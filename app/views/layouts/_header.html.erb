@@ -1,0 +1,31 @@
+<header class="container-fluid middle-blue-back">
+  <nav class="navbar navbar-expand-lg">
+    <!-- ロゴ画像。あとで差し替え。 -->
+    <div>
+      <h1>LOGO</h1>
+    </div>
+
+    <!-- 画面幅が狭くなった時のみ出現するトグルボタン -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFumizuki" aria-controls="navbarFumizuki" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 各種リンク。管理者ログイン時と顧客ログイン時、非ログイン時で表示切替。 -->
+    <div class="collapse navbar-collapse" id="navbarFumizuki">
+      <!-- 管理者 -->
+      <ul class="navbar-nav mr-auto w-75 nav-justified">
+
+        <!-- 顧客 -->
+
+        <!-- 非ログイン -->
+
+          <li class="nav-item"><%= link_to '会社概要', homes_about_path, class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to '商品一覧',  class: 'nav-link' %></li>
+          <li class="nav-item" ><%= link_to '新規登録',  class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'ログイン',  class: 'nav-link' %></li>
+      </ul>
+
+
+    </div>
+  </nav>
+</header>
