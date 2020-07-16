@@ -16,11 +16,18 @@
       <ul class="navbar-nav mr-auto w-75 nav-justified">
         <!-- 管理者 -->
         <!-- 顧客 -->
+        <% if member_signed_in? %>
+          <li class="nav-item"><%= link_to  do %><i class="fas fa-user"></i>マイページ<% end %></li>
+          <li class="nav-item"><%= link_to  do %><i class="fas fa-cookie-bite"></i>商品一覧<% end %></li>
+          <li class="nav-item"><%= link_to  do %><div class="icon-flex"><i class="icon-count text-center"></i></div><i class="cart">カート</i><% end %></li>
+          <li class="nav-item"><%= link_to destroy_member_session_path, method: :delete do %><i class="fas fa-sign-out-alt"></i>ログアウト<% end %></li>
         <!-- 非ログイン -->
-          <li class="nav-item"><%= link_to '会社概要', homes_about_path, class: 'nav-link' %></li>
+        <% else %>
+          <li class="nav-item"><%= link_to '会社概要', public_about_url, class: 'nav-link' %></li>
           <li class="nav-item"><%= link_to '商品一覧',  class: 'nav-link' %></li>
-          <li class="nav-item" ><%= link_to '新規登録',  class: 'nav-link' %></li>
-          <li class="nav-item"><%= link_to 'ログイン',  class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to '新規登録', new_member_registration_path,  class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'ログイン', new_member_session_url, class: 'nav-link' %></li>
+        <% end %>
       </ul>
     </div>
   </nav>
