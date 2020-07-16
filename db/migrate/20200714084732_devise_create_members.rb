@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class DeviseCreateMembers < ActiveRecord::Migration[5.2]
   def change
     create_table :members do |t|
@@ -13,6 +11,15 @@ class DeviseCreateMembers < ActiveRecord::Migration[5.2]
 
       ## Rememberable
       t.datetime :remember_created_at
+
+      t.string :last_name
+      t.string :first_name
+      t.string :last_name_kana
+      t.string :first_name_kana
+      t.string :postal_code
+      t.string :address
+      t.integer :phone_number
+      t.integer :withdrawal_status
       t.timestamps null: false
     end
 
