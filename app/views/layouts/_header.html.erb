@@ -12,20 +12,16 @@
 
     <!-- 各種リンク。管理者ログイン時と顧客ログイン時、非ログイン時で表示切替。 -->
     <div class="collapse navbar-collapse" id="navbarFumizuki">
-      <!-- 管理者 -->
+
       <ul class="navbar-nav mr-auto w-75 nav-justified">
-
+        <!-- 管理者 -->
         <!-- 顧客 -->
-
         <!-- 非ログイン -->
-
           <li class="nav-item"><%= link_to '会社概要', homes_about_path, class: 'nav-link' %></li>
           <li class="nav-item"><%= link_to '商品一覧',  class: 'nav-link' %></li>
           <li class="nav-item" ><%= link_to '新規登録',  class: 'nav-link' %></li>
           <li class="nav-item"><%= link_to 'ログイン',  class: 'nav-link' %></li>
       </ul>
-
-
     </div>
   </nav>
 </header>
