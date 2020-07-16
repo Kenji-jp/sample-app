@@ -11,7 +11,7 @@ class Item < ApplicationRecord
 	enum sale_status: {販売中:0,販売停止:1} #enumの記述方式
 
     # バリデーション
-    validates :item_name, presence: true #バリデーションname空欄禁止
+    validates :item_name, presence: true
     validates :explanation, presence: true #バリデーションname空欄禁止
     validates :unit_price_without_tax, presence: true #バリデーションname空欄禁止
 end
