@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   }
   namespace :public do
     get '/about' => 'homes#about'
+    resource :members, only:[:show ,:edit,:update]
   end
 
 
