@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   #root path
   root 'public/homes#top'
   devise_for :members, controllers: {
@@ -8,7 +9,10 @@ Rails.application.routes.draw do
   }
   namespace :public do
     get '/about' => 'homes#about'
-    resource :members, only:[:show ,:edit,:update]
+    resource  :members, only:[:show ,:edit,:update]
+    resources :items, only:[:index,:show,:new] do
+      get :search, on: :collection # ジャンル検索機能用
+    end
   end
 
 
