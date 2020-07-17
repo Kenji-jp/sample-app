@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   namespace :public do
     get '/about' => 'homes#about'
     resource  :members, only:[:show ,:edit,:update]
+    resources :addresses, only:[:index, :edit, :destroy, :create, :update]
     resources :items, only:[:index,:show,:new] do
       get :search, on: :collection # ジャンル検索機能用
     end
