@@ -4,35 +4,35 @@ RSpec.describe "Public::Addresses", type: :request do
 
   describe "GET /index" do
     it "returns http success" do
-      get "/public/addresses/index"
+      get "public_addresses_path"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /create" do
     it "returns http success" do
-      get "/public/addresses/create"
+      get "public_addresses"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /edit" do
     it "returns http success" do
-      get "/public/addresses/edit"
+      get "edit_public_address"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /update" do
     it "returns http success" do
-      get "/public/addresses/update"
+      get "public_address"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /destroy" do
     it "returns http success" do
-      get "/public/addresses/destroy"
+      get "public_address"
       expect(response).to have_http_status(:success)
     end
   end
