@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  namespace :public do
+    get 'carts/index'
+  end
   #root path
   root 'public/homes#top'
   devise_for :members, controllers: {
