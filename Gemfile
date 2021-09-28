@@ -81,7 +81,7 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 # ページャ
 gem 'kaminari','~> 1.1.1'
-gem 'nokogiri', '1.10.10'
+gem 'nokogiri', '1.12.5'
 
 # デバッグ
 gem 'pry-rails'
